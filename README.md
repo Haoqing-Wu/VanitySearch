@@ -1,4 +1,4 @@
-## Usage
+## Usage (Dockerfile)
 Clone the repo to local and cd into the folder
 ```
 git clone https://github.com/Haoqing-Wu/VanitySearch.git
@@ -11,6 +11,11 @@ docker build --build-arg CUDA=12.2.2 --build-arg CCAP=8.9 --tag 'vanity_search' 
 Run the container
 ```
 docker run -it --rm --gpus all -p 8090:8090 vanity_search
+```
+## Usage (Image)
+```
+sudo docker pull haoqingwu/vanity_search:40xx
+sudo docker run -it --gpus all -p 8090:8090 haoqingwu/vanity_search:40xx 
 ```
 ## Test the response
 Run request.py in the project folder locally
