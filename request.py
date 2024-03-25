@@ -46,8 +46,8 @@ while True:
             pub_hex_val = bip38.private_key_to_public_key(priv_key_val)
             pub_address_val = bip38.public_key_to_addresses(pub_hex_val)
 
-            print('Priv + Key -> Pub:', pub_address_val)
-            if pub_address_val[:20] == pub_address[:20]:
+            print('Priv -> Pub:', pub_address_val)
+            if pub_address_val[:20] == pub_address[:20]: # last few bytes are different, needs to check why
                 print('PubAddress is valid.')
                 valid_cnt += 1
             else:
