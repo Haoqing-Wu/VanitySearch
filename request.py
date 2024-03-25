@@ -9,7 +9,7 @@ valid_cnt = 0
 invalid_cnt = 0
 while True:
     print("###############################################")
-    prefix = '1' + ''.join(random.choices(string.ascii_letters.replace('O', '').replace('l', ''), k=5))
+    prefix = '1' + ''.join(random.choices(string.ascii_letters.replace('O', '').replace('l', ''), k=6))
     print("Sending prefix: ", prefix)
     response = requests.post(url, json={'addr':prefix})
 
